@@ -17,6 +17,9 @@ persist.rild.nitz_short_ons_3=
 ril.subscription.types=NV,RUIM
 DEVICE_PROVISIONED=1
 
+# Lockscreen rotate override
+lockscreen.rot_override=true
+
 debug.sf.hw=1
 debug.egl.hw=1
 debug.composition.type=dyn
