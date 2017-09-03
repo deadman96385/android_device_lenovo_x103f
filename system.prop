@@ -172,6 +172,9 @@ ro.sys.fw.trim_empty_percent=100
 ro.sys.fw.trim_cache_percent=100
 ro.sys.fw.trim_enable_memory=1073741824
 
+# Storage
+ro.sys.sdcardfs=true
+
 #Enable Delay service restart
 ro.am.reschedule_service=true
 
