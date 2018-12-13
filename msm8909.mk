@@ -23,6 +23,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     audio.offload.disable=1
 
+#Tablet WIFI Only
+PRODUCT_PROPERTY_OVERRIDES := \
+    ro.carrier=wifi-only
+
 #Camera
 PRODUCT_PACKAGES += \
     camera.msm8909 \
