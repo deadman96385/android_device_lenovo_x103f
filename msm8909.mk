@@ -37,6 +37,10 @@ PRODUCT_PACKAGES += \
     libmmjpeg_interface \
     mm-qcamera-app
 
+# Snap camera app
+PRODUCT_PACKAGES += \
+    Snap
+
 #Display
 PRODUCT_PACKAGES += \
     hwcomposer.msm8909 \
