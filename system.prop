@@ -16,9 +16,6 @@ persist.rild.nitz_short_ons_2=
 persist.rild.nitz_short_ons_3=
 ril.subscription.types=NV,RUIM
 DEVICE_PROVISIONED=1
-#modify by yangtao change ro.telephony.default_network to 9 for A6501M-556 20160523
-# Start in gsm_wcdma_lte mode
-ro.telephony.default_network=9
 
 debug.sf.hw=1
 debug.egl.hw=1
@@ -43,7 +40,7 @@ sys.hwc.gpu_perf_mode=1
 #tunnel.audiovideo.decode=true
 #lpa.decode=false
 #lpa.use-stagefright=true
-#persist.speaker.prot.enable=false
+persist.speaker.prot.enable=false
 
 #
 # system props for the cne module
@@ -90,11 +87,6 @@ persist.tuning.qdcm=1
 
 # System property for Screen Color
 ro.qcom.screencolor=1
-
-#
-# System props for telephony
-# System prop to turn on CdmaLTEPhone always
-telephony.lteOnCdmaDevice=1
 
 #Simulate sdcard on /data/media
 #
@@ -203,3 +195,6 @@ ro.qq.camera.sensor=3
 
 #Bluetooth
 qcom.bluetooth.soc=smd
+
+#Tablet Wifi
+ro.carrier=wifi-only
