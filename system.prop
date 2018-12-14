@@ -97,6 +97,8 @@ persist.fuse_sdcard=true
 # System prop to allocate Reprocess buffer as "1"
 # during Longshot usecase
 persist.camera.longshot.stages=1
+media.stagefright.legacyencoder=true
+media.stagefright.less-secure=true
 
 #
 # dirty ratio value when enable ums
