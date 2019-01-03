@@ -267,11 +267,6 @@ PRODUCT_COPY_FILES += \
 #/*Deleted by yujunfeng moved WCNSS_qcom_cfg.ini to product_config_xxx 2016-04-27 end*/
 #/* Modified by rentianzhi Add R/W WLAN MAC for diag module 2016-02-03 end */
 
-# Added by wangjunbo for factory current test (A6505) SW00188623 2016-06-17 begin
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init.currenttest.timeout.sh:system/etc/init.currenttest.timeout.sh
-# Added by wangjunbo for factory current test (A6505) SW00188623 2016-06-17 end
-
 PRODUCT_PACKAGES += \
     libwifi-hal-qcom
 
@@ -309,23 +304,6 @@ PRODUCT_PACKAGE_OVERLAYS := $(QCPATH)/qrdplus/Extension/res-overlay \
         $(PRODUCT_PACKAGE_OVERLAYS)
 # mayingda 2016.05.20 modified to del Android_M res-overlay , 650X, SW00187993 , end
 
-#add by zhaohupeng for include product_config for A650x 2016-02-04 begin
-ifeq ($(findstring AR6500,$(YEP_PRODUCT_NAME)),AR6500)
-	include product_config_A6500/product_config.mk
-endif
-
-ifeq ($(findstring AR6501,$(YEP_PRODUCT_NAME)),AR6501)
-        include product_config_A6501/product_config.mk
-endif
-
-ifeq ($(findstring AR6502,$(YEP_PRODUCT_NAME)),AR6502)
-        include product_config_A6502/product_config.mk
-endif
-
-ifeq ($(findstring AR6505,$(YEP_PRODUCT_NAME)),AR6505)
-        include product_config_A6505/product_config.mk
-endif
-
 #add by zhaohupeng for include product_config for A650x 2016-02-04 end
 
 # <A650X-m zhaohupeng 2016-2-18 begin
@@ -338,17 +316,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Sensor HAL conf file
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/sensors/hals.conf:system/etc/sensors/hals.conf
-#add by shenxinyu for update ISO for A6505 SW00189102 2016-07-25 begin
-ifeq ($(YEP_PRODUCT_NAME),AR6505)
-    PRODUCT_COPY_FILES += $(LOCAL_PATH)/YEPAUTOINST_ARH_ROW.ISO:system/etc/YEPAUTOINST.ISO
-else
-        ifeq ($(findstring PRC,$(PRODUCT_EXTERNAL_VERSION)),PRC)
-            PRODUCT_COPY_FILES += $(LOCAL_PATH)/YEPAUTOINST_PRC.ISO:system/etc/YEPAUTOINST.ISO
-        else
-            PRODUCT_COPY_FILES += $(LOCAL_PATH)/YEPAUTOINST_ROW.ISO:system/etc/YEPAUTOINST.ISO
-        endif
-endif
+$(LOCAL_PATH)/sensors/hals.conf:system/etc/sensors/hals.conf
+
 #add by shenxinyu for update ISO for A6505 SW00189102 2016-07-25 end
 #add by wangqi for SW00188085 to add tptest begin
 #PRODUCT_COPY_FILES += packages/yepapp/YepFactoryKit/assets/Conf_MultipleTest.ini:system/etc/Conf_MultipleTest.ini
