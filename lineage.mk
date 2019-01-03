@@ -18,10 +18,7 @@ TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 800
 TARGET_BOOTANIMATION_HALF_RES := true
 
-# Release name
-PRODUCT_RELEASE_NAME := msm8909
-
-# Inherit some common CM stuff.
+# Inherit some common Lineage stuff.
 $(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
 
 # Inherit device configuration
@@ -34,5 +31,6 @@ PRODUCT_DEVICE := x103f
 PRODUCT_MODEL := TB-X103F
 PRODUCT_MANUFACTURER := lenovo
 
-
-
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    BUILD_FINGERPRINT=Lenovo/TB-X103F/TB-X103F:6.0.1/LenovoTB-X103F/TB-X103F_S000038_180317_ROW:user/release-keys \
+	PRIVATE_BUILD_DESC="msm8909-user 6.0.1 LenovoTB-X103F TB-X103F_S000038_180317_ROW release-keys"
