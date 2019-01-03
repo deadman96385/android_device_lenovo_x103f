@@ -137,9 +137,9 @@ PRODUCT_PACKAGES += \
 
 # media_profiles and media_codecs xmls for msm8909
 ifeq ($(TARGET_ENABLE_QC_AV_ENHANCEMENTS), true)
-PRODUCT_COPY_FILES += $(LOCAL_PATH)/media/media_profiles_8909.xml:system/etc/media_profiles.xml \
-                      $(LOCAL_PATH)/media/media_codecs_8909.xml:system/etc/media_codecs.xml \
-                      $(LOCAL_PATH)/media/media_codecs_performance_8909.xml:system/etc/media_codecs_performance.xml
+PRODUCT_COPY_FILES += $(LOCAL_PATH)/configs/media/media_profiles_8909.xml:system/etc/media_profiles.xml \
+                      $(LOCAL_PATH)/configs/media/media_codecs_8909.xml:system/etc/media_codecs.xml \
+                      $(LOCAL_PATH)/configs/media/media_codecs_performance_8909.xml:system/etc/media_codecs_performance.xml
 endif
 
 $(call inherit-product, frameworks/native/build/tablet-7in-hdpi-1024-dalvik-heap.mk)
@@ -162,14 +162,14 @@ PRODUCT_PACKAGES += libGLES_android
 
 # Audio configuration file
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/audio_policy.conf:system/etc/audio_policy.conf \
-    $(LOCAL_PATH)/audio_effects.conf:system/vendor/etc/audio_effects.conf \
-    $(LOCAL_PATH)/mixer_paths.xml:system/etc/mixer_paths.xml \
-    $(LOCAL_PATH)/mixer_paths_msm8909_pm8916.xml:system/etc/mixer_paths_msm8909_pm8916.xml \
-    $(LOCAL_PATH)/mixer_paths_wcd9326_i2s.xml:system/etc/mixer_paths_wcd9326_i2s.xml \
-    $(LOCAL_PATH)/sound_trigger_mixer_paths.xml:system/etc/sound_trigger_mixer_paths.xml \
-    $(LOCAL_PATH)/sound_trigger_platform_info.xml:system/etc/sound_trigger_platform_info.xml \
-    $(LOCAL_PATH)/audio_platform_info.xml:system/etc/audio_platform_info.xml
+    $(LOCAL_PATH)/configs/audio/audio_policy.conf:system/etc/audio_policy.conf \
+    $(LOCAL_PATH)/configs/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf \
+    $(LOCAL_PATH)/configs/audio/mixer_paths.xml:system/etc/mixer_paths.xml \
+    $(LOCAL_PATH)/configs/audio/mixer_paths_msm8909_pm8916.xml:system/etc/mixer_paths_msm8909_pm8916.xml \
+    $(LOCAL_PATH)/configs/audio/mixer_paths_wcd9326_i2s.xml:system/etc/mixer_paths_wcd9326_i2s.xml \
+    $(LOCAL_PATH)/configs/audio/sound_trigger_mixer_paths.xml:system/etc/sound_trigger_mixer_paths.xml \
+    $(LOCAL_PATH)/configs/audio/sound_trigger_platform_info.xml:system/etc/sound_trigger_platform_info.xml \
+    $(LOCAL_PATH)/configs/audio/audio_platform_info.xml:system/etc/audio_platform_info.xml
 
 PRODUCT_BOOT_JARS += qcom.fmradio \
 
@@ -183,9 +183,25 @@ PRODUCT_BOOT_JARS += dpmapi
 PRODUCT_BOOT_JARS += com.qti.location.sdk
 endif
 
+# Keylayouts
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/keylayout/atmel_mxt_ts.kl:system/usr/keylayout/atmel_mxt_ts.kl \
+    $(LOCAL_PATH)/configs/keylayout/ft5x06_ts.kl:system/usr/keylayout/ft5x06_ts.kl \
+    $(LOCAL_PATH)/configs/keylayout/FT5x36.kl:system/usr/keylayout/FT5x36.kl \
+    $(LOCAL_PATH)/configs/keylayout/Goodix-TS.kl:system/usr/keylayout/Goodix-TS.kl \
+    $(LOCAL_PATH)/configs/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
+    $(LOCAL_PATH)/configs/keylayout/synaptics_dsx.kl:system/usr/keylayout/synaptics_dsx.kl
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/wifi/hostapd.accept:system/etc/hostapd/hostapd.accept \
+    $(LOCAL_PATH)/wifi/hostapd.conf:system/etc/hostapd/hostapd_default.conf \
+    $(LOCAL_PATH)/wifi/hostapd.deny:system/etc/hostapd/hostapd.deny \
+    $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
+    $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf
+
 # Listen configuration file
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/listen_platform_info.xml:system/etc/listen_platform_info.xml
+    $(LOCAL_PATH)/configs/audio/listen_platform_info.xml:system/etc/listen_platform_info.xml
 
 # Feature definition files for msm8909
 PRODUCT_COPY_FILES += \
@@ -245,9 +261,9 @@ PRODUCT_PACKAGES += hwdiag
 #/* Modified by rentianzhi Add R/W WLAN MAC for diag module 2016-02-03 begin */
 #/*Deleted by yujunfeng moved WCNSS_qcom_cfg.ini to product_config_xxx 2016-04-28 begin*/
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/WCNSS_wlan_dictionary.dat:persist/WCNSS_wlan_dictionary.dat \
-    $(LOCAL_PATH)/wlan_mac.bin:persist/wlan_mac.bin \
-    $(LOCAL_PATH)/WCNSS_qcom_wlan_nv.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
+    $(LOCAL_PATH)/wifi/WCNSS_wlan_dictionary.dat:persist/WCNSS_wlan_dictionary.dat \
+    $(LOCAL_PATH)/wifi/wlan_mac.bin:persist/wlan_mac.bin \
+    $(LOCAL_PATH)/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
 #/*Deleted by yujunfeng moved WCNSS_qcom_cfg.ini to product_config_xxx 2016-04-27 end*/
 #/* Modified by rentianzhi Add R/W WLAN MAC for diag module 2016-02-03 end */
 
@@ -322,7 +338,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Sensor HAL conf file
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/sensors/hals.conf:system/etc/sensors/hals.conf
+    $(LOCAL_PATH)/configs/sensors/hals.conf:system/etc/sensors/hals.conf
 #add by shenxinyu for update ISO for A6505 SW00189102 2016-07-25 begin
 ifeq ($(YEP_PRODUCT_NAME),AR6505)
     PRODUCT_COPY_FILES += $(LOCAL_PATH)/YEPAUTOINST_ARH_ROW.ISO:system/etc/YEPAUTOINST.ISO
