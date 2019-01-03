@@ -44,16 +44,6 @@ endif
 $(INSTALLED_KERNEL_TARGET): $(TARGET_PREBUILT_KERNEL) | $(ACP)
 	$(transform-prebuilt-to-target)
 
-#----------------------------------------------------------------------
-# Copy additional target-specific files
-#----------------------------------------------------------------------
-include $(CLEAR_VARS)
-LOCAL_MODULE       := vold.fstab
-LOCAL_MODULE_TAGS  := optional eng
-LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := $(LOCAL_MODULE)
-include $(BUILD_PREBUILT)
-
 #Create symbolic links
 #/* Modified by rentianzhi Add R/W WLAN MAC for diag module 2016-02-03 begin */
 $(shell mkdir -p $(TARGET_OUT_ETC)/firmware/wlan/prima; \
