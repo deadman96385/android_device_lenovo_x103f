@@ -29,45 +29,6 @@
 -->
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Do not translate. Defines the slots for the right-hand side icons.  That is to say, the
-         icons in the status bar that are not notifications. -->
-    <string-array name="config_statusBarIcons">
-       <item><xliff:g id="id">managed_profile</xliff:g></item>
-       <item><xliff:g id="id">ime</xliff:g></item>
-       <item><xliff:g id="id">sync_failing</xliff:g></item>
-       <item><xliff:g id="id">sync_active</xliff:g></item>
-       <item><xliff:g id="id">cast</xliff:g></item>
-       <item><xliff:g id="id">hotspot</xliff:g></item>
-       <item><xliff:g id="id">location</xliff:g></item>
-       <item><xliff:g id="id">su</xliff:g></item>
-       <item><xliff:g id="id">bluetooth</xliff:g></item>
-       <item><xliff:g id="id">nfc</xliff:g></item>
-       <item><xliff:g id="id">tty</xliff:g></item>
-       <item><xliff:g id="id">speakerphone</xliff:g></item>
-       <item><xliff:g id="id">zen</xliff:g></item>
-       <item><xliff:g id="id">mute</xliff:g></item>
-       <item><xliff:g id="id">volume</xliff:g></item>
-       <item><xliff:g id="id">wifi</xliff:g></item>
-       <item><xliff:g id="id">cdma_eri</xliff:g></item>
-       <item><xliff:g id="id">data_connection</xliff:g></item>
-       <item><xliff:g id="id">phone_evdo_signal</xliff:g></item>
-       <item><xliff:g id="id">phone_signal</xliff:g></item>
-       <item><xliff:g id="id">battery</xliff:g></item>
-       <item><xliff:g id="id">alarm_clock</xliff:g></item>
-       <item><xliff:g id="id">secure</xliff:g></item>
-       <item><xliff:g id="id">clock</xliff:g></item>
-    </string-array>
-   <!-- Config determines whether to update phone object when voice registration
-   state changes. Voice radio tech change will always trigger an update of
-   phone object irrespective of this config -->
-<!--   <bool name="config_switch_phone_on_voice_reg_state_change">false</bool> -->
-
-   <!-- Configuartion to support 7bit Ascii encoding and decoding
-   for long messages. -->
-<!--   <bool name="config_ascii_7bit_support_for_long_message">true</bool> -->
-
-   <!-- Enable button light -->
-<!--   <bool name="config_button_light_enabled">true</bool> -->
    <!--
    Indicate whether to allow the device to suspend when the screen is off
    due to the proximity sensor.  This resource should only be set to true
