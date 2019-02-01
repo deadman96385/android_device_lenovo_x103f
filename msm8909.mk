@@ -61,31 +61,17 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Init
 PRODUCT_PACKAGES += \
     fstab.qcom \
-    init.carrier.rc \
-    init.class_main.sh \
-    init.mdm.sh \
     init.qcom.bms.sh \
-    init.qcom.class_core.sh \
-    init.qcom.factory.rc \
     init.qcom.rc \
     init.qcom.serialno.sh \
     init.qcom.sh \
     init.qcom.usb.rc \
     init.target.rc \
     ueventd.qcom.rc \
-    init.qcom.audio.sh \
     init.qcom.bt.sh \
-    init.qcom.coex.sh \
-    init.qcom.debug.sh \
-    init.qcom.efs.sync.sh \
     init.qcom.fm.sh \
     init.qcom.post_boot.sh \
-    init.qcom.sdio.sh \
-    init.qcom.uicc.sh \
-    init.qcom.wifi.sh \
-    init.qcom.zram.sh \
-    init.qti.ims.sh \
-    init.qti.synaptics_dsx_qhd.sh
+    init.qcom.wifi.sh
 
 # Media
 PRODUCT_PACKAGES += \

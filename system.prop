@@ -203,6 +203,17 @@ ro.qq.camera.sensor=3
 
 #Bluetooth
 qcom.bluetooth.soc=smd
+ro.qualcomm.bluetooth.opp=true
+ro.qualcomm.bluetooth.ftp=true
+ro.qualcomm.bluetooth.nap=false
+ro.qualcomm.bluetooth.hsp=false
+ro.qualcomm.bluetooth.hfp=false
+ro.qualcomm.bluetooth.pbap=true
+ro.qualcomm.bluetooth.map=true
+ro.bluetooth.sap=false
+ro.bluetooth.dun=false
+ro.bluetooth.hfp.ver=1.7
+ro.qualcomm.bt.hci_transport=smd
 
 #Tablet Wifi
 ro.carrier=wifi-only
