@@ -61,12 +61,10 @@ TARGET_HAS_LEGACY_CAMERA_HAL1 := true
 
 # Dexpreopt
 ifeq ($(HOST_OS),linux)
-  ifeq ($(WITH_DEXPREOPT),)
-    ifeq ($(TARGET_BUILD_VARIANT),user)
-               WITH_DEXPREOPT := true
-               DEX_PREOPT_DEFAULT := true
-               WITH_DEXPREOPT_PIC := true
-    endif
+  ifeq ($(TARGET_BUILD_VARIANT),userdebug)
+    WITH_DEXPREOPT := true
+    # Retain classes.dex in APK's
+    DEX_PREOPT_DEFAULT := nostripping
   endif
 endif
 
