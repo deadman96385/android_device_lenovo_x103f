@@ -14,8 +14,8 @@
 # limitations under the License.
 #
 # Boot animation
-TARGET_SCREEN_HEIGHT := 1280
-TARGET_SCREEN_WIDTH := 800
+TARGET_SCREEN_HEIGHT := 800
+TARGET_SCREEN_WIDTH := 1280
 TARGET_BOOTANIMATION_HALF_RES := true
 
 # Inherit some common Lineage stuff.
