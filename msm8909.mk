@@ -196,6 +196,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	
 # Sensor HAL conf file
 PRODUCT_COPY_FILES += \
-$(LOCAL_PATH)/sensors/hals.conf:system/etc/sensors/hals.conf
+	$(LOCAL_PATH)/configs/sensors/hals.conf:system/etc/sensors/hals.conf
 
 $(call inherit-product-if-exists, vendor/lenovo/x103f/x103f-vendor.mk)
