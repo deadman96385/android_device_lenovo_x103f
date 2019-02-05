@@ -61,13 +61,9 @@ TARGET_HAS_LEGACY_CAMERA_HAL1 := true
 
 # Dexpreopt
 ifeq ($(HOST_OS),linux)
-  ifeq ($(WITH_DEXPREOPT),)
-    ifeq ($(TARGET_BUILD_VARIANT),user)
-               WITH_DEXPREOPT := true
-               DEX_PREOPT_DEFAULT := true
-               WITH_DEXPREOPT_PIC := true
-    endif
-  endif
+  WITH_DEXPREOPT := true
+  DEX_PREOPT_DEFAULT := true
+  WITH_DEXPREOPT_PIC := true
 endif
 
 # Memory Config
