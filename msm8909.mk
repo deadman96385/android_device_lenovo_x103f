@@ -47,7 +47,8 @@ PRODUCT_PACKAGES += \
 # FM radio
 PRODUCT_PACKAGES += \
     FMRadio \
-    libfmjni
+    libfmjni \
+    qcom.fmradio
 
 # GPS
 PRODUCT_COPY_FILES += \
@@ -98,10 +99,8 @@ PRODUCT_PACKAGES += \
     libOmxEvrcEnc \
     libOmxQcelp13Enc \
     libOmxVdec \
-    libOmxVenc
-
-PRODUCT_BOOT_JARS += \
-    libstagefrighthw
+    libOmxVenc \
+    qcmediaplayer
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -147,11 +146,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/sound_trigger_mixer_paths.xml:system/etc/sound_trigger_mixer_paths.xml \
     $(LOCAL_PATH)/configs/audio/sound_trigger_platform_info.xml:system/etc/sound_trigger_platform_info.xml \
     $(LOCAL_PATH)/configs/audio/audio_platform_info.xml:system/etc/audio_platform_info.xml
-
-PRODUCT_BOOT_JARS += \
-    qcom.fmradio \
-    tcmiface \
-    qcmediaplayer
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
