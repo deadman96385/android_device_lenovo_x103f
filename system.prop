@@ -146,11 +146,6 @@ voice.voip.conc.disabled=true
 #Audio VoIP / playback record concurrency flags
 rec.playback.conc.disabled=true
 
-#Set composition for USB
-persist.sys.usb.config=diag,serial_smd,serial_tty,mass_storage,adb
-#Set read only default composition for USB
-ro.sys.usb.default.config=diag,serial_smd,serial_tty,mass_storage,adb
-
 # set max background services
 ro.config.max_starting_bg=8
 
